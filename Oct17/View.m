@@ -51,7 +51,7 @@
 	CGContextRef c = UIGraphicsGetCurrentContext();
 	CGContextBeginPath(c);	//unnecessary here: the path is already empty.
 	CGContextAddEllipseInRect(c, r);
-	CGContextSetRGBFillColor(c, 1.0, 0.546875, 0.0, 1.0);	//red, opaque
+	CGContextSetRGBFillColor(c, 1.0, 0.546875, 0.0, 1.0);	//orange
 	//Light source at upper left, shadow at lower right.
 	CGSize shadow = CGSizeMake(10, -20);
     
