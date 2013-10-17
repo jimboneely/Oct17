@@ -19,6 +19,7 @@
 		2919DA75180FA8FF002E7AA8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2919DA5D180FA8FE002E7AA8 /* UIKit.framework */; };
 		2919DA7D180FA8FF002E7AA8 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 2919DA7B180FA8FF002E7AA8 /* InfoPlist.strings */; };
 		2919DA7F180FA8FF002E7AA8 /* Oct17Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 2919DA7E180FA8FF002E7AA8 /* Oct17Tests.m */; };
+		2919DA8A180FA970002E7AA8 /* View.m in Sources */ = {isa = PBXBuildFile; fileRef = 2919DA89180FA970002E7AA8 /* View.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +49,8 @@
 		2919DA7A180FA8FF002E7AA8 /* Oct17Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Oct17Tests-Info.plist"; sourceTree = "<group>"; };
 		2919DA7C180FA8FF002E7AA8 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		2919DA7E180FA8FF002E7AA8 /* Oct17Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Oct17Tests.m; sourceTree = "<group>"; };
+		2919DA88180FA970002E7AA8 /* View.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = View.h; sourceTree = "<group>"; };
+		2919DA89180FA970002E7AA8 /* View.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = View.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +112,8 @@
 			children = (
 				2919DA68180FA8FE002E7AA8 /* Oct17AppDelegate.h */,
 				2919DA69180FA8FE002E7AA8 /* Oct17AppDelegate.m */,
+				2919DA88180FA970002E7AA8 /* View.h */,
+				2919DA89180FA970002E7AA8 /* View.m */,
 				2919DA6B180FA8FE002E7AA8 /* Images.xcassets */,
 				2919DA60180FA8FE002E7AA8 /* Supporting Files */,
 			);
@@ -203,6 +208,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				ar,
 			);
 			mainGroup = 2919DA4D180FA8FE002E7AA8;
 			productRefGroup = 2919DA57180FA8FE002E7AA8 /* Products */;
@@ -242,6 +248,7 @@
 			files = (
 				2919DA66180FA8FE002E7AA8 /* main.m in Sources */,
 				2919DA6A180FA8FE002E7AA8 /* Oct17AppDelegate.m in Sources */,
+				2919DA8A180FA970002E7AA8 /* View.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,6 +449,7 @@
 				2919DA84180FA8FF002E7AA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2919DA85180FA8FF002E7AA8 /* Build configuration list for PBXNativeTarget "Oct17Tests" */ = {
 			isa = XCConfigurationList;
@@ -450,6 +458,7 @@
 				2919DA87180FA8FF002E7AA8 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
