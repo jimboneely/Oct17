@@ -41,6 +41,8 @@
 	 the View.  bounds.origin.x and bounds.origin.y are the coordinates of
 	 the upper left corner of the View.
      */
+	CGFloat w = self.bounds.size.width;
+	CGFloat h = self.bounds.size.height;
 	CGRect r = CGRectMake(
                           -radius,
                           -radius,
@@ -58,6 +60,34 @@
 	//5 is the amount of blur.  A smaller number makes a sharper shadow.
 	CGContextSetShadow(c, shadow, 1);
     CGContextFillPath(c);
+    
+    //Octagon.
+    
+    CGContextTranslateCTM(c, -bounds.size.width / 2, -bounds.size.height / 2);
+	//CGContextRotateCTM(c, 90 * M_PI / 180);
+    
+	CGPoint center = CGPointMake(w / 2, h / 2);
+	CGFloat radius2 = h / 15;
+	CGContextBeginPath(c);
+    
+    for (int i = 0; i <= 16; i = i + 2) {
+		CGFloat theta = 2 * M_PI * i / 16;
+		CGFloat x = center.x + radius2 * cosf(theta);
+		CGFloat y = center.y - radius2 * sinf(theta);
+        
+		if (i == 0) {
+			CGContextMoveToPoint(c, x, y);
+		} else {
+			CGContextAddLineToPoint(c, x, y);
+		}
+	}
+    
+	CGContextClosePath(c);
+	CGContextSetRGBFillColor(c, 1.0, 0.0, 0.0, 0.75);
+    CGContextSetShadow(c, CGSizeMake(0, 0), 0);
+	CGContextFillPath(c);
+    
+    [self performSelector: @selector(setNeedsDisplay) withObject: nil afterDelay: 2.0];
     
 }
 @end
